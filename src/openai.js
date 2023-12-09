@@ -17,7 +17,9 @@ export async function sendMsgToDoctorGPT(message) {
       const apiUrl = `http://localhost:8000/model?prompt=${encodedMessage}`;
   
       // Make a GET request to the API
-      const response = await fetch(apiUrl);
+      const response = await fetch(apiUrl, {
+        method: "post",
+      });
   
       // Check if the request was successful (status code 200)
       if (!response.ok) {
@@ -30,7 +32,7 @@ export async function sendMsgToDoctorGPT(message) {
       // Do something with the data (you can return it or process it further)
       console.log('API Response:', data);
   
-      return data;
+      return data['response'];
     } catch (error) {
       // Handle errors
       console.error('Error sending message to OpenAI:', error);
