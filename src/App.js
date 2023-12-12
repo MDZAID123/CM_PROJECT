@@ -7,7 +7,7 @@ import gptLogo from './assets/chatgpt.svg';
 import addBtn from './assets/add-30.png';
 
 import msgIcon from './assets/message.svg';
-import ic from './assets/ic.jpg';
+import ic from './assets/ic2.jpg';
 
 import home from './assets/home.svg';
 import saved from './assets/bookmark.svg';
@@ -15,12 +15,12 @@ import rocket from './assets/rocket.svg';
 
 import sendBtn from './assets/send.svg';
 
-import userIcon from './assets/user-icon.png';
+import userIcon from './assets/user-icon2.jpg';
 
 
 import gptImgLogo from './assets/chatgptLogo.svg';
 
-import drc from './assets/drc.png';
+import drc2 from './assets/drc2.jpg';
 import {sendMsgToDoctorGPT} from '../src/openai';
 import { useEffect, useRef, useState } from 'react';
 
@@ -103,7 +103,7 @@ function App() {
       <div className="sideBar">
 
         <div className="upperSide">
-          <div className="upperSideTop "><img  className='mylogo' src={ic} alt="Logo" /><span className="brand">Doctor_GPT</span></div>
+          <div className="upperSideTop "><img  className='mylogo' src={ic} alt="Logo" /><span className="brand">BHARAT CDSS</span></div>
           <button className="midBtn" onClick={handleReload}>
   <img src={addBtn} alt="new chat" className="addBtn" />
   New Consultation
@@ -157,13 +157,13 @@ function App() {
 
         <div className="chatFooter">
           <div className="inp">
-            <input type="text" placeholder='Get consulted by Doctor GPT' value={input} onKeyDown={handleEnter}
+            <input type="text" placeholder='Get consulted by BHARAT CDSS' value={input} onKeyDown={handleEnter}
             onChange={(e)=>{setInput(e.target.value)}}/>
             <button className="send" onClick={handleSend}><img src={sendBtn} alt="Send" />
             </button>
           </div>
           <p>
-            Doctor GPT  may produce inaccurate information about disease as it not an actual doctor
+            Disclaimer: BHARAT CDSS  may produce inaccurate information about disease as it not an actual doctor
 
           </p>
           
